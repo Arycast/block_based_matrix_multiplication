@@ -81,7 +81,7 @@ module systolic_array_4x4_tb ();
 	initial begin
 		rst_n = 0; 
 		#(T/2);
-		$monitor ("Time:Row1:%0t\t 0x%0h |Row1: 0x%0h |Row2: 0x%0h |Row3: 0x%0h",$time, row0,row1,row2,row3);
+		$monitor ("Time:%0t\t Row1:0x%0h |Row1: 0x%0h |Row2: 0x%0h |Row3: 0x%0h",$time, row0,row1,row2,row3);
 		rst_n = 1;
 	end
 

@@ -6,7 +6,7 @@ module saturate_tb ();
     * Parameter
     ***************************************************************************/
 	parameter BIT_WIDTH = 16;
-	parameter FRAC_WDITH = 8;
+	parameter FRAC_WIDTH = 8;
 
    /****************************************************************************
     * Signals
@@ -23,7 +23,7 @@ module saturate_tb ();
     * Instantiate Modules
     ***************************************************************************/
 
-   saturate #(.BIT_WIDTH(BIT_WIDTH), .FRAC_WDITH(FRAC_WDITH)) sat_block (.in(in), .out(out));
+   saturate #(.BIT_WIDTH(BIT_WIDTH), .FRAC_WIDTH(FRAC_WIDTH)) sat_block (.in(in), .out(out));
 
    /****************************************************************************
     * Apply Stimulus

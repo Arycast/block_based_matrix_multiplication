@@ -27,6 +27,6 @@ end
 assign mult_result = data_west * data_north;
 assign mac_result = mult_result + {result,{FRAC_WIDTH{1'b0}}};
 
-saturate #(.BIT_WIDTH(BIT_WIDTH), .FRAC_WIDTH(FRAC_WIDTH)) sat_block (.in(mac_result), .out(temp_acc));
+saturate #(.BIT_WIDTH(BIT_WIDTH), .FRAC_WIDTH(FRAC_WIDTH)) sat_block (.clk(clk),.rst_n(rst_n),.in(mac_result), .out(temp_acc));
     
 endmodule
