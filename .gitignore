@@ -1,0 +1,5 @@
+#iverilog files
+*.out
+
+#GTKWave files
+*.vcd
