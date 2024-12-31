@@ -1,5 +1,5 @@
-testbench\block_32x4_tb.v
-rtl\block_32x4.v
+testbench\block_4x32_tb.v
+rtl\block_4x32.v
 rtl\systolic_array_4x4.v
 rtl\pe.v
 rtl\saturate.v
