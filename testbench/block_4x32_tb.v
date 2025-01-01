@@ -53,8 +53,8 @@ module block_4x32_tb ();
     * Apply Stimulus
     ***************************************************************************/
    initial begin
-		// $dumpfile("wave.vcd");
-		// $dumpvars(0,block_4x32_tb);
+		$dumpfile("wave.vcd");
+		$dumpvars(0,block_4x32_tb);
 		for (i=0; i < in_length*8; i=i+1) begin
 			$dumpvars(0,data_north[i]);
 			$dumpvars(0,data_west[i]);

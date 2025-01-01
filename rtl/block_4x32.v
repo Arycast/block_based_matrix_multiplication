@@ -45,7 +45,6 @@ always @(posedge clk) begin
     if (!rst_n) begin
         state_reg <= 0;
         cnt_reg <= 0;
-        done <= 0;
     end else begin
         state_reg <= state_next;
         cnt_reg <= cnt_next;
@@ -80,6 +79,7 @@ always @(*) begin
         default: begin
             state_next = 0;
             cnt_next = 0;
+            done = 1'b0;
         end
     endcase
 end
