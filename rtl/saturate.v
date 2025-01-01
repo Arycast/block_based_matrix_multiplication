@@ -15,7 +15,7 @@ assign sel[1] = in[2*BIT_WIDTH-1];
 register #(2) reg0 (.clk(clk),.rst_n(rst_n),.in(sel),.out(temp_sel));
 
 assign out = sel[1]? 
-    (sel[0]? {1'b1,{BIT_WIDTH-1{1'b0}}} : in[BIT_WIDTH+FRAC_WIDTH-1:FRAC_WIDTH]) :
+    (sel[0]? in[BIT_WIDTH+FRAC_WIDTH-1:FRAC_WIDTH] : {1'b1,{BIT_WIDTH-1{1'b0}}}) :
     (sel[0]? {1'b0,{BIT_WIDTH-1{1'b1}}} : in[BIT_WIDTH+FRAC_WIDTH-1:FRAC_WIDTH]) ;
     
 endmodule

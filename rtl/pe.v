@@ -24,8 +24,8 @@ always @(posedge clk) begin
 	end
 end
 
-assign mult_result = data_west * data_north;
-assign mac_result = mult_result + {result,{FRAC_WIDTH{1'b0}}};
+assign mult_result = {{BIT_WIDTH{data_west[BIT_WIDTH-1]}},data_west} * {{BIT_WIDTH{data_north[BIT_WIDTH-1]}},data_north};
+assign mac_result = mult_result + {{FRAC_WIDTH{result[BIT_WIDTH-1]}},result,{FRAC_WIDTH{1'b0}}};
 
 saturate #(.BIT_WIDTH(BIT_WIDTH), .FRAC_WIDTH(FRAC_WIDTH)) sat_block (.clk(clk),.rst_n(rst_n),.in(mac_result), .out(temp_acc));
     

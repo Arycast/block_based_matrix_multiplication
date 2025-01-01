@@ -75,23 +75,23 @@ module block_4x32_tb ();
 
 		test = 0;
 		for (i=0; i<in_length; i=i+1) begin
-			north_in[0] = data_north[i];
-			north_in[1] = data_north[in_length*1+i];
-			north_in[2] = data_north[in_length*2+i];
-			north_in[3] = data_north[in_length*3+i];
-			north_in[4] = data_north[in_length*4+i];
-			north_in[5] = data_north[in_length*5+i];
-			north_in[6] = data_north[in_length*6+i];
-			north_in[7] = data_north[in_length*7+i];
+			north_in[0] <= data_north[i];
+			north_in[1] <= data_north[in_length*1+i];
+			north_in[2] <= data_north[in_length*2+i];
+			north_in[3] <= data_north[in_length*3+i];
+			north_in[4] <= data_north[in_length*4+i];
+			north_in[5] <= data_north[in_length*5+i];
+			north_in[6] <= data_north[in_length*6+i];
+			north_in[7] <= data_north[in_length*7+i];
 
-			west_in[0] = data_west[i];
-			west_in[1] = data_west[in_length*1+i];
-			west_in[2] = data_west[in_length*2+i];
-			west_in[3] = data_west[in_length*3+i];
-			west_in[4] = data_west[in_length*4+i];
-			west_in[5] = data_west[in_length*5+i];
-			west_in[6] = data_west[in_length*6+i];
-			west_in[7] = data_west[in_length*7+i];
+			west_in[0] <= data_west[i];
+			west_in[1] <= data_west[in_length*1+i];
+			west_in[2] <= data_west[in_length*2+i];
+			west_in[3] <= data_west[in_length*3+i];
+			west_in[4] <= data_west[in_length*4+i];
+			west_in[5] <= data_west[in_length*5+i];
+			west_in[6] <= data_west[in_length*6+i];
+			west_in[7] <= data_west[in_length*7+i];
 
 			#T; test = ~test;
 		end
